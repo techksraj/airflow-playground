@@ -5,7 +5,7 @@ from airflow.operators.bash import BashOperator
 from datetime import datetime
 import random
 
-with DAG(dag_id='my_dag', start_date=datetime(2026, 1, 1), schedule_interval='@daily', catchup=False) as dag:
+with DAG(dag_id='dynamic_task_to_regular_task', start_date=datetime(2026, 1, 1), schedule='@daily', catchup=False) as dag:
 
    @task
    def get_files():
