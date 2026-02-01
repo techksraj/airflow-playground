@@ -1,0 +1,1 @@
+echo "Today is {{ data_interval_start.format('dddd') }}"
